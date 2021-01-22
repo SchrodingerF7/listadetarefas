@@ -18,6 +18,8 @@ let card = document.querySelector('.card');
 
 let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
+criarTarefa();
+
 function criarTarefa() {
 
     lista.innerHTML = '';
