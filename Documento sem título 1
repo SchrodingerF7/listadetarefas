@@ -1,0 +1,50 @@
+// resgata o botao html via id
+
+let btn = document.querySelector('#botao');
+
+// função para criar os elementos da lista usando evento onclick
+// utilizando os valores do input como texto
+
+btn.onclick = function () {
+
+    // resgata o valor do input através da id
+
+    let inputCampo = document.querySelector('#inp').value;
+
+    // cria um elemento em lista e atribui a variável
+
+    let liCampo = document.createElement("li");
+
+    // inclui as classes bootstrap ao item de lista
+
+    liCampo.setAttribute('class', 'list-group-item list-group-item-action');
+
+    // cria um texto usando o valor resgatado no input
+    // e atribui a variável texto
+
+    let texto = document.createTextNode(inputCampo);
+
+    // vincula o texto como filho do elemento de lista criado
+
+    liCampo.appendChild(texto);
+
+    // atribui o elemento lista criado, já com texto
+    // ao elemento <ul> na pagina html usando id
+
+    document.querySelector('#lista').appendChild(liCampo);
+
+    // remove valores dentro do campo input
+
+    document.querySelector('#inp').value = '';
+    
+}
+
+
+/* 
+
+    <li class="list-group-item list-group-item-action"> Estudar </li>
+    <li class="list-group-item list-group-item-action"> Tocar violão </li>
+    <li class="list-group-item list-group-item-action"> Treinar </li>
+    <li class="list-group-item list-group-item-action"> Dormir </li> 
+
+*/
